@@ -1,0 +1,17 @@
+{
+  "name": "gh-deployment-workflow",
+  "version": "1.0.0",
+  "description": "Basic Vite project for GitHub Pages deployment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "6.1.0"
+  }
+}
