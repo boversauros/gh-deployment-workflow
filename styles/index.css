@@ -9,171 +9,101 @@ body {
   line-height: 1.6;
   color: #1a1a1a;
   background: #fafafa;
-  overflow-x: hidden;
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 20px;
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  padding: clamp(2rem, 5vw, 4rem) 0;
-  min-height: 50vh;
-}
-
-.hero-content {
-  width: 100%;
-  max-width: 800px;
-}
-
-.code-block {
-  font-family: "SF Mono", Menlo, Monaco, "Courier New", monospace;
-  color: #666;
-  font-size: clamp(0.875rem, 2vw, 1rem);
-  margin-bottom: 1.5rem;
-  overflow-x: auto;
+  padding: 40px 0;
+  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-size: 32px;
   font-weight: 500;
-  margin-bottom: clamp(1rem, 3vw, 1.5rem);
-  color: #1a1a1a;
+  margin-bottom: 20px;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: 16px;
   color: #666;
-  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 30px;
   max-width: 600px;
   line-height: 1.8;
 }
 
 .tech-stack {
   display: flex;
-  gap: clamp(0.25rem, 1vw, 0.5rem);
-  margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
 }
 
 .tech-tag {
-  padding: 0.4rem 0.8rem;
+  padding: 6px 12px;
   border-radius: 3px;
   background: #f0f0f0;
   color: #333;
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
-  font-family: "SF Mono", Menlo, Monaco, "Courier New", monospace;
-}
-
-.resources {
-  padding: clamp(2rem, 5vw, 4rem) 0;
+  font-size: 14px;
 }
 
 .resources-grid {
   display: grid;
-  gap: clamp(1rem, 3vw, 2rem);
-  padding: clamp(1rem, 3vw, 2rem) 0;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .resource-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: clamp(1rem, 3vw, 1.5rem);
+  background: white;
   border: 1px solid #eaeaea;
   border-radius: 4px;
-  transition: all 0.2s;
+  padding: 20px;
   text-decoration: none;
   color: inherit;
-  background: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .resource-card:hover {
-  border-color: #666;
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #666;
 }
 
 .resource-title {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: 18px;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 .resource-description {
-  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-size: 14px;
   color: #666;
 }
 
-/* Media Queries for medium screens (tablets) */
-@media (max-width: 768px) {
+/* Mobile adjustments */
+@media (max-width: 480px) {
   .container {
-    padding: 0 1.25rem;
+    width: 95%;
+    padding: 15px;
   }
 
-  .resources-grid {
-    grid-template-columns: repeat(2, 1fr);
+  h1 {
+    font-size: 28px;
   }
 
   .hero {
-    padding: 2rem 0;
-  }
-
-  .tech-stack {
-    gap: 0.5rem;
-  }
-}
-
-/* Media Queries for small screens (mobile) */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 1rem;
+    padding: 20px 0;
   }
 
   .resources-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .hero {
-    padding: 1.5rem 0;
-  }
-
-  .tech-stack {
-    gap: 0.25rem;
-  }
-
-  .tech-tag {
-    padding: 0.3rem 0.6rem;
-  }
-
-  .resource-card {
-    padding: 1.25rem;
-  }
-
-  .resource-title {
-    font-size: 1rem;
-  }
-
-  .resource-description {
-    font-size: 0.875rem;
-  }
-}
-
-/* Media Queries for larger screens */
-@media (min-width: 1200px) {
-  .container {
-    padding: 0 2rem;
   }
 }
